@@ -1,18 +1,18 @@
 # week_05_rest_api/app.py
 
 # --- Imports (all built-in Python modules) ---
-from http.server import HTTPServer, BaseHTTPRequestHandler
+from http.server import HTTPServer, BaseHTTPRequestHandler # this creates actual web server
 from urllib.parse import urlparse
 import json
 
 # --- MongoDB ---
-from pymongo import MongoClient
-from bson.objectid import ObjectId
+from pymongo import MongoClient  # connecting to mongodb
+from bson.objectid import ObjectId # mongo uses obid
 
 # --- MongoDB setup ---
-client = MongoClient("localhost", 27017)
-db = client["internship_db"]
-tasks_collection = db["api_tasks"]
+client = MongoClient("localhost", 27017) # connect mongo to a localhost
+db = client["internship_db"] #create a database 
+tasks_collection = db["api_tasks"] # collection to store tasks
 
 
 # --- Helper: convert MongoDB task to clean JSON-friendly dict ---

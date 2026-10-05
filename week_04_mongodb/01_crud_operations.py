@@ -4,7 +4,7 @@ from pymongo import MongoClient
 # 1. Connect to the local MongoDB instance
 client = MongoClient('localhost', 27017)
 
-# 2. Access a database (created automatically if it doesn't exist)
+# 2. Access a database (it is created automatically if it doesn't exist)
 db = client['internship_db']
 
 # 3. Access a collection (like a table in SQL)
